@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+    http:
+      multipart:
+        max-file-size: 1000MB
+        max-request-size: 10MB
+
+    thymeleaf:
+      cache: false
+      mode: LEGACYHTML5
+
+    datasource:
+        url: jdbc:mysql://172.16.31.243:3306/cloudmonitor?useUnicode=true&characterEncoding=utf-8
+        username: cloudmonitor
+        password: safedog@2017
+        driver-class-name: com.mysql.jdbc.Driver
+        # 使用druid数据源
+        type: com.alibaba.druid.pool.DruidDataSource
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
