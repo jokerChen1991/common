@@ -13,8 +13,8 @@ spring:
 
     datasource:
         url: jdbc:mysql://192.168.88.124:3306/cloudmonitor?useUnicode=true&characterEncoding=utf-8
-        username: cloudmonitor
-        password: safedog@2017
+        username: root
+        password: root
         driver-class-name: com.mysql.jdbc.Driver
         # 使用druid数据源
         type: com.alibaba.druid.pool.DruidDataSource
