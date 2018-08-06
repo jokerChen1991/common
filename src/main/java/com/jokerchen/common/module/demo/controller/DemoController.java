@@ -18,6 +18,6 @@ public class DemoController {
 	@RequestMapping("toIndex")
 	public String toIndex() {
 		log.info("toIndex");
-		return "html/demo/index";
+		return "index";
 	}
 }
